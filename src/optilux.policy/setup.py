@@ -15,8 +15,8 @@ setup(name='optilux.policy',
         "Programming Language :: Python",
         ],
       keywords='',
-      author='',
-      author_email='',
+      author='Marcin Bakowski',
+      author_email='marcin.bakowski@blstream.com',
       url='http://svn.plone.org/svn/collective/',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
@@ -25,14 +25,18 @@ setup(name='optilux.policy',
       zip_safe=False,
       install_requires=[
           'setuptools',
+          'Plone',
           # -*- Extra requirements: -*-
       ],
+      extras_require={
+          'test': ['plone.app.testing',]
+      },
       entry_points="""
       # -*- Entry points: -*-
 
       [z3c.autoinclude.plugin]
       target = plone
       """,
-      setup_requires=["PasteScript"],
-      paster_plugins=["ZopeSkel"],
+      #setup_requires=["PasteScript"],
+      #paster_plugins=["ZopeSkel"],
       )
