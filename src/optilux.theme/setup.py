@@ -3,9 +3,9 @@ import os
 
 version = '1.0'
 
-setup(name='optilux.policy',
+setup(name='optilux.theme',
       version=version,
-      description="optilux policy",
+      description="Optilux theme",
       long_description=open("README.txt").read() + "\n" +
                        open(os.path.join("docs", "HISTORY.txt")).read(),
       # Get more strings from
@@ -15,8 +15,8 @@ setup(name='optilux.policy',
         "Programming Language :: Python",
         ],
       keywords='',
-      author='Marcin Bakowski',
-      author_email='marcin.bakowski@blstream.com',
+      author='',
+      author_email='',
       url='http://svn.plone.org/svn/collective/',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
@@ -25,14 +25,13 @@ setup(name='optilux.policy',
       zip_safe=False,
       install_requires=[
           'setuptools',
-          'Plone',
-          'Products.PloneFormGen',
-          'optilux.theme',
+          'plone.app.theming',
           # -*- Extra requirements: -*-
       ],
       extras_require={
           'test': ['plone.app.testing',]
       },
+
       entry_points="""
       # -*- Entry points: -*-
 

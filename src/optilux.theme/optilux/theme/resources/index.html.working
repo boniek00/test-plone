@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <title>Test title</title>
+    </head>
+    <body>
+        <div id="portal-logo" ></div>
+        <div id="actions" ></div>
+        <div id="global-navigation"></div>
+        <div id="document-content" ></div>
+        <div id="column-one"></div>
+        <div id="column-two"></div>
+    </body>
+</html>
