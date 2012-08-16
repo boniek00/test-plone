@@ -26,6 +26,7 @@ setup(name='optilux.policy',
       install_requires=[
           'setuptools',
           'Plone',
+          'Products.PloneFormGen',
           # -*- Extra requirements: -*-
       ],
       extras_require={
