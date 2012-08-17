@@ -78,5 +78,6 @@
          <replace css:content="#plone-contentmenu-workflow .actionMenuContent li"
              css:theme-children="#document-workflow"
              />
+         <replace css:content="#portal-breadcrumbs" css:theme="#portal-breadcrumbs" />
     </rules>
 </rules>

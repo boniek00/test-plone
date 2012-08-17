@@ -26,6 +26,7 @@ setup(name='optilux.theme',
       install_requires=[
           'setuptools',
           'plone.app.theming',
+          'plone.app.themingplugins',
           # -*- Extra requirements: -*-
       ],
       extras_require={
