@@ -3,9 +3,9 @@ import os
 
 version = '1.0'
 
-setup(name='optilux.policy',
+setup(name='optilux.sitecontent',
       version=version,
-      description="optilux policy",
+      description="Site content",
       long_description=open("README.txt").read() + "\n" +
                        open(os.path.join("docs", "HISTORY.txt")).read(),
       # Get more strings from
@@ -15,8 +15,8 @@ setup(name='optilux.policy',
         "Programming Language :: Python",
         ],
       keywords='',
-      author='Marcin Bakowski',
-      author_email='marcin.bakowski@blstream.com',
+      author='',
+      author_email='',
       url='http://svn.plone.org/svn/collective/',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
@@ -25,17 +25,17 @@ setup(name='optilux.policy',
       zip_safe=False,
       install_requires=[
           'setuptools',
-          'five.grok',
-          'Plone',
-          'Products.PloneFormGen',
-          'optilux.theme',
-          'optilux.sitecontent',
+          'plone.app.dexterity [grok]',
+          'plone.app.referenceablebehavior',
+          'plone.app.relationfield',
+          'plone.namedfile [blobs]',
           # -*- Extra requirements: -*-
       ],
       extras_require={
           'test': ['plone.app.testing',]
       },
-      entry_points="""
+
+      entry_point="""
       # -*- Entry points: -*-
 
       [z3c.autoinclude.plugin]
