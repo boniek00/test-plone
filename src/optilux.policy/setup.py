@@ -25,6 +25,7 @@ setup(name='optilux.policy',
       zip_safe=False,
       install_requires=[
           'setuptools',
+          'five.grok',
           'Plone',
           'Products.PloneFormGen',
           'optilux.theme',
