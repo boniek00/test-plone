@@ -26,10 +26,11 @@ class TestInstantiation(InstantMessageTestCase):
         #by a Manager or Portal Owner
         self.setRoles(['Manager'])
         self.portal.invokeFactory('InstantMessage', 'im1')
-        self.portal.im1.title = 'test title'
+        self.portal.im1.setTitle('test title')
 
     def testCreateInstantMessage(self):
         self.failUnless('im1' in self.portal.objectIds())
+        self.assertEqual('test title', self.portal.im1.title)
 
     def testInstantMessageInterface(self):
         im = self.portal.im1
