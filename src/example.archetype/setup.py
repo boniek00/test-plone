@@ -55,6 +55,7 @@ setup(name='example.archetype',
       include_package_data=True,
       zip_safe=False,
       install_requires=['setuptools',
+          'Products.CMFPlone',
                         # -*- Extra requirements: -*-
                         ],
       extras_require={
