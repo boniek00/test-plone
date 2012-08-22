@@ -2,8 +2,10 @@
 """
 
 from zope.i18nmessageid import MessageFactory
-from example.archetype import config
+archetypeMessageFactory = MessageFactory('example.archetype')
 
+from example.archetype import config
+from example.archetype.content import message
 from Products.Archetypes import atapi
 from Products.CMFCore import utils
 
@@ -11,7 +13,6 @@ from Products.CMFCore import utils
 # This will be imported with the special name "_" in most modules. Strings
 # like _(u"message") will then be extracted by i18n tools for translation.
 
-archetypeMessageFactory = MessageFactory('example.archetype')
 
 
 def initialize(context):
@@ -45,6 +46,7 @@ def initialize(context):
     for atype, constructor in zip(content_types, constructors):
         utils.ContentInit('%s: %s' % (config.PROJECTNAME, atype.portal_type),
             content_types=(atype, ),
-            permission=config.ADD_PERMISSIONS[atype.portal_type],
+            permission=config.ADD_CONTENT_PERMISSIONS['InstantMessage'],
+            #permission=config.ADD_PERMISSIONS[atype.portal_type],
             extra_constructors=(constructor,),
             ).initialize(context)

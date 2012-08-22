@@ -61,21 +61,9 @@ setup_product()
 ptc.setupPloneSite(products=['example.archetype'])
 
 
-class TestCase(ptc.PloneTestCase):
-    """We use this base class for all the tests in this package. If
-    necessary, we can put common utility or setup code in here. This
-    applies to unit test cases.
+class InstantMessageTestCase(ptc.PloneTestCase):
+    """Base class for integration tests.
+
+    This may provide specific set-up and tear-down operations, or provide
+    convenience methods.
     """
-
-
-class FunctionalTestCase(ptc.FunctionalTestCase):
-    """We use this class for functional integration tests that use
-    doctest syntax. Again, we can put basic common utility or setup
-    code in here.
-    """
-
-    def afterSetUp(self):
-        roles = ('Member', 'Contributor')
-        self.portal.portal_membership.addMember('contributor',
-                                                'secret',
-                                                roles, [])
